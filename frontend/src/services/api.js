@@ -2,6 +2,15 @@ import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+fetch(`${API_URL}/api/endpoint`, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
 
 export const getApprovedRequests = async (role) => {
   try {
